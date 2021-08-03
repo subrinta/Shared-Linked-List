@@ -1,0 +1,4 @@
+gcc -c -Wall -Werror -fpic sll_lib.c
+gcc -shared -o libsll.so sll_lib.o
+gcc -L/home/subi/OS_lab_18_2_21/shared_ll -Wall -o first main.c -lsll
+export LD_LIBRARY_PATH=/home/subi/OS_lab_18_2_21/shared_ll:$LD_LIBRARY_PATH
